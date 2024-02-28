@@ -1,16 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "CommonJS",
+    "target": "ES2021",
+    "module": "ES2022",
     "moduleResolution": "Node",
-    "strict": true,
+    "strict": false,
     "noImplicitAny": true,
     "declaration": false,
     "skipLibCheck": true,
     "strictNullChecks": true,
-    "resolveJsonModule": true,
-    "outDir": "dist"
+    "resolveJsonModule": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["dist", "node_modules"]
 }

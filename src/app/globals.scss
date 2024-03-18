@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	.light {
+		--c-background: #f7f8f8;
+
+		--c-heart-solid: #6c28d9;
+		--c-heart-solid-hover: #5a20b6;
+		--c-heart-border: #6c28d9;
+		--c-heart-border-hover: #000000;
+		--c-heart-background: theme('colors.neutral.100');
+		--c-heart-background-hover: theme('colors.neutral.50');
+		--c-heart-text: #6c28d9;
+		--c-heart-foreground: #ffffff;
+	}
+
+	.dark {
+		--c-background: #100e12;
+
+		--c-heart-solid: #6c28d9;
+		--c-heart-solid-hover: #5a20b6;
+		--c-heart-border: #6c28d9;
+		--c-heart-border-hover: #000000;
+		--c-heart-background: theme('colors.neutral.100');
+		--c-heart-background-hover: theme('colors.neutral.50');
+		--c-heart-text: #6c28d9;
+		--c-heart-foreground: #ffffff;
+	}
+}

@@ -1,0 +1,15 @@
+.overlay {
+	@apply fixed inset-0;
+
+	&.overlay-transparent {
+		@apply bg-transparent;
+	}
+
+	&.overlay-opaque {
+		@apply bg-neutral-950/40;
+	}
+
+	&.overlay-blur {
+		@apply bg-neutral-950/30 backdrop-blur-[4px];
+	}
+}

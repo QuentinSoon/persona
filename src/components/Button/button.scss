@@ -1,0 +1,88 @@
+.button {
+	@apply relative select-none duration-300 inline-flex items-center justify-center whitespace-nowrap box-border subpixel-antialiased;
+
+	/**
+	 * Button variant
+	 */
+	&.button-variant-solid {
+		@apply bg-[--button-solid] text-[--button-foreground];
+		&:not(:disabled):hover {
+			@apply bg-[--button-solid-hover];
+		}
+	}
+	&.button-variant-outline {
+		@apply bg-transparent text-[--button-text] ring-2 ring-inset ring-[--button-border];
+		&:not(:disabled):hover {
+			@apply bg-[--button-background];
+		}
+	}
+	&.button-variant-ghost {
+		@apply bg-transparent text-[--button-text] ring-2 ring-inset ring-[--button-border];
+		&:not(:disabled):hover {
+			@apply bg-[--button-solid] text-[--button-foreground] ring-[--button-border];
+		}
+	}
+	&.button-variant-light {
+		@apply bg-transparent text-[--button-text];
+		&:not(:disabled):hover {
+			@apply bg-[--button-background];
+		}
+	}
+	&.button-variant-flat {
+		@apply bg-[--button-background] text-[--button-text];
+		&:not(:disabled):hover {
+			@apply bg-[--button-background-hover];
+		}
+	}
+	&.button-variant-faded {
+		@apply bg-[theme(colors.neutral.100)] text-[--button-text] ring-2 ring-inset ring-[theme(colors.neutral.200)];
+		&:not(:disabled):hover {
+			@apply bg-[theme(colors.neutral.50)];
+		}
+	}
+
+	/**
+	 * Button size
+	 */
+	&.button-size-sm {
+		@apply px-3 h-8 min-w-16 text-sm font-normal rounded-xl gap-1;
+	}
+	&.button-size-md {
+		@apply px-4 h-10 min-w-20 text-sm font-normal rounded-xl gap-1;
+	}
+	&.button-size-lg {
+		@apply px-6 h-12 min-w-24 text-base font-normal rounded-[14px] gap-1;
+	}
+	/**
+	 * Button rounded
+	 */
+	&.button-rounded-none {
+		@apply rounded-none;
+	}
+	&.button-rounded-sm {
+		@apply rounded-lg;
+	}
+	&.button-rounded-md {
+		@apply rounded-xl;
+	}
+	&.button-rounded-lg {
+		@apply rounded-[14px];
+	}
+	&.button-rounded-full {
+		@apply rounded-full;
+	}
+
+	/**
+	 * Button color
+	 */
+	&.button-color-heart {
+		--button-solid: theme('colors.heart.solid');
+		--button-solid-hover: theme('colors.heart.solid-hover');
+		--button-border: theme('colors.heart.border');
+		--button-border-hover: theme('colors.heart.border-hover');
+		--button-background: theme('colors.heart.background');
+		--button-background-hover: theme('colors.heart.background-hover');
+		--button-text: theme('colors.heart.text');
+		--button-foreground: theme('colors.heart.foreground');
+	}
+}
